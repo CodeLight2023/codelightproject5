@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/6.0.2/esm/ionicons.min.js">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header {
+    width: 100%;
+    height: auto;
+}
+#header .head-info {
+    width: 100%;
+    height: auto;
+    background: rgba(25, 135, 129, 0.774);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.8s ease-in-out;
+}
+#header .head-info .address-info {
+    margin: 10px;
+}
+#header .head-info .address-info ul {
+    list-style: none;
+    margin: 10px;
+}
+#header .head-info .address-info ul li i {
+    color: rgb(25,135,84);
+    padding: 5px;
+}
+#header .head-info .address-info ul {
+    display: inline-flex;
+    /* color: #fff; */
+    /* justify-content: space-between; */
+    padding: 10px;
+}
+#header .head-info .address-info ul li {
+    color: #fff;
+    /* justify-content: space-between; */
+    padding: 8px;
+}
+#header .contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+#header .contact-info .icon ul {
+    list-style: none;
+    margin: 4px;
+} 
+#header .contact-info .icon ul li i {
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+#header .contact-info .icon ul li i:hover {
+    color: rgba(0, 225, 255, 0.712);
+    font-weight: bolder;
+}
+#header .contact-info .icon ul {
+    display: inline-flex;
+    padding: 5px;
+}
+#header .contact-info .icon ul li {
+    padding: 5px;
+}
+#header .contact-info .head-btn .btn {
+    display: inline-block;
+    padding: 10px 15px 12px 14px;
+    background: aqua;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+    transition: 1s ease-in-out;
+}
+#header .contact-info .head-btn .btn:hover {
+    background: rgba(0, 225, 255, 0.712);
+}
+.menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.menu .logo {
+    margin: 10px;
+}
+.menu .logo h2 {
+    padding: 10px;
+}
+.menu .list-item-1 {
+    margin: 10px;
+    list-style: none;
+}
+.menu .list-item-1 li {
+    display: inline-block;
+    padding: 18px;
+}
+.menu .list-item-1 li a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.8s ease-in-out;
+}
+.menu .list-item-1 li a:hover, .menu .list-item-1 li a.active {
+    color: rgb(0, 119, 255);
+    font-weight: bolder;
+}
+.menu .list-item-1 a i {
+    font-size: 20px;
+    padding: 0px 5px 0px 5px;
+    font-weight: bolder;
+}
+.menu-2 {
+    display: none;
+}
+.head-hint {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.head-hint .head-hint-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+.head-hint .head-hint-content .head-hint-item {
+    display: flex;
+    padding: 10px;
+    transition: 0.8s ease-in-out;
+}
+.head-hint .head-hint-content .head-hint-item li {
+    list-style: none;
+    padding: 10px;
+}
+.head-hint .head-hint-content .head-hint-item li i {
+    color: rgb(0, 174, 255);
+    font-size: 20px;
+}
+.head-hint .head-hint-content .head-hint-item li h6 {
+    font-weight: bolder;
+    font-size: 15px;
+}
+.head-hint .head-hint-content .head-hint-item li p {
+    color: rgb(143, 84, 18);
+    font-weight: bolder;
+    font-size: 15px;
+}
+.head-hint .head-hint-contact {
+    margin: 10px;
+}
+.head-hint .head-hint-contact .btn {
+    display: inline-block;
+    padding: 10px 15px 12px 14px;
+    background: rgb(0, 255, 149);
+    color: #fff;
+    font-size: 18px;
+    margin: 15px;
+    font-weight: bolder;
+    transition: 1s ease-in-out;
+}
+.head-hint .head-hint-contact .btn i {
+    padding: 8px;
+}
+.head-hint .head-hint-contact .btn:hover {
+    background: rgb(0, 255, 234);
+}
+.head-hint .head-hint-contact .btn-2 {
+    display: none;
+}
+#home {
+    width: 100%;
+    /* min-height: 90vh; */
+    height: auto;
+    padding: 20px;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('Bg/bg 8.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100px;
+}
+#home .banner-text {
+    margin: 10px;
+    padding: 10px;
+}
+#home .banner-text i {
+    color: red;
+    padding: 9px;
+}
+#home .banner-text em {
+    text-decoration: none;
+    color: #fff;
+}
+#home .banner-text h3 {
+    color: #fff;
+    padding: 10px 10px 0px 10px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#home .banner-text h3 span {
+    color: aqua;
+}
+#home .banner-text p {
+    color: #fff;
+    padding: 8px;
+}
+#home .banner-text .btn {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+    font-weight: bolder;
+    transition: 1s ease-in-out;
+}
+#home .banner-text .btn:hover {
+    background: rgba(204, 204, 204, 0.438);
+}
+#home .under-info {
+    display: flex;
+    float: right;
+}
+#home .under-info li {
+    list-style: none;
+    display: block;
+    padding: 10px;
+    text-align: right;
+}
+#home .under-info li h6 {
+    color: #fff;
+}
+#home .under-info li p {
+    color: #fff;
+}
+#home .under-info li p a {
+    color: aqua;
+    text-decoration: none;
+    padding: 5px;
+}
+#home .under-info li i {
+    padding: 8px;
+    background: aqua;
+    font-size: 20px;
+    /* font-weight: bolder; */
+    color: #fff;
+}
+#extra-abt .extra-abt-box {
+    width: 100%;
+    height: auto;
+    /* margin: -50px auto; */
+    margin: 0 auto;
+    background: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    transition: 0.8s ease-in-out;
+}
+#extra-abt .extra-abt-box .extra-abt-content {
+    display: block; 
+    margin: 5px 10px 5px 2px ;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+}
+#extra-abt .extra-abt-box .extra-abt-content i {
+    display: block;
+    padding: 10px;
+    color: rgb(0, 174, 255);
+    font-size: 20px;
+}
+#extra-abt .extra-abt-box .extra-abt-content h6 {
+    font-weight: bolder;
+}
+#extra-abt .extra-abt-box .extra-abt-content p {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+#extra-abt .extra-abt-box .extra-abt-content:hover {
+    background: rgba(255, 255, 255, 0.178);
+}
+/* #extra-abt .extra-abt-box {
+    margin-top: -50px;
+    background: #ccc;
+    padding: 5px;
+    text-align: center;
+}
+#extra-abt .extra-abt-box .extra-abt-content {
+    /* display: block; 
+    margin: 5px 10px 5px 2px ;
+    padding: 5px;
+}
+#extra-abt .extra-abt-box .extra-abt-content i {
+    display: block;
+    padding: 10px;
+    color: rgb(0, 174, 255);
+    font-size: 20px;
+} */
+
+/* Standard */
+#standard {
+    padding: 10px;
+}
+#standard .standard-content {
+    padding: 20px;
+}
+#standard .standard-content h4 {
+    font-weight: bolder;
+    color: rgba(62, 97, 94, 0.966);
+}
+#standard .standard-content p {
+    color: #38816bb0;
+}
+#standard .standard-content .stand-features h5 {
+    font-weight: bolder;
+    padding: 8px;
+    color: rgba(62, 97, 94, 0.966);
+}
+#standard .standard-content .stand-features .stand-features-content {
+    display: flex;
+    /* padding: 5px; */
+}
+#standard .standard-content .stand-features .stand-features-content li {
+    list-style: none;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.514);
+}
+#standard .standard-content .stand-features .stand-features-content li i {
+    color: aqua;
+    padding: 5px;
+}
+/* #standard .standard-content .standard-btn {
+    padding: 5px;
+    margin: 5px;
+} */
+#standard .standard-content .standard-btn .btn-view {
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    border: 1.5px solid #000;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    margin: 10px;
+    transition: 0.8s ease-in-out;
+}
+#standard .standard-content .standard-btn .btn-view:hover {
+    background: aqua;
+    border: none;
+    color: #fff;
+}
+#standard .standard-content .standard-btn .btn-contact{
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    background: aqua;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px;
+    transition: 0.8s ease-in-out;
+}
+#standard .standard-content .standard-btn .btn-contact:hover {
+    background: #fff;
+    border: 1.5px solid #000;
+    color: #000;
+}
+.standard-image {
+    margin: 10px;
+}
+.standard-image img {
+    max-width: auto;
+    min-height: 400px;
+}
+/* Footer */
+footer {
+    width: 100%;
+    box-shadow: 50px 20px 40px 0 rgba(110,130,208, .18);
+    /* padding: 20px; */
+    background: rgba(25, 135, 129, 0.774);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+footer h2 {
+    padding: 10px;
+    /* color: rgba(0, 0, 0, 0.664); */
+    color: #fff;
+}
+footer p {
+    padding: 10px;
+    /* color: rgba(0, 0, 0, 0.562); */
+    color: #ccc;
+}
+footer li {
+    list-style: none;
+    padding: 5px;
+    /* color: rgba(0, 0, 0, 0.562); */
+    color: #ccc;
+}
+footer li a {
+    /* color: rgba(0, 0, 0, 0.562)!important; */
+    color: #ccc;
+    text-decoration: none!important;
+}
+@media (max-width: 550px) {
+    .head-hint .head-hint-contact .btn-2 {
+        display: inline-block;
+        padding: 10px 15px 12px 14px;
+        background: rgb(0, 255, 149);
+        color: #fff;
+        font-size: 18px;
+        margin: 15px;
+        font-weight: bolder;
+        border-radius: 5px;
+        transition: 1s ease-in-out;
+    }
+    .head-hint .head-hint-contact .btn {
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .head-hint {
+        width: 100%;
+        height: auto;
+        /* display: block; */
+    }
+    .head-hint .head-hint-content {
+        display: block;
+        padding: 10px;
+        background: #adedad;
+    }
+    .head-hint .head-hint-content .head-hint-item:hover {
+        background: #adedda;
+    }
+}
+@media (max-width: 970px) {
+    #header .head-info {
+        display: none;
+    }
+}
+@media (max-width: 810px) {
+    .menu-2 {
+        display: contents;
+    }
+    .menu .list-item-1 {
+        display: none;
+    }
+    .menu-2 .btn {
+        border: none!important;
+        margin: 25px;
+    }
+    .menu-2 .btn i {
+        color: #000!important;
+        font-size: 24px;
+        text-align: center;
+    }
+    .menu-2 .offcanvas-header {
+        background: rgba(25, 135, 129, 0.774);;
+    }
+    .menu-2 .offcanvas-body .list-item-2  {
+        margin: 10px;
+        list-style: none;
+    }
+    .menu-2 .offcanvas-body .list-item-2 li {
+        display: inline-block;
+        padding: 13px;
+    }
+    .menu-2 .offcanvas-body .list-item-2 li a {
+        text-decoration: none;
+        color: #000;
+        transition: 0.8s ease-in-out;
+    }
+    .menu-2 .offcanvas-body .list-item-2 li a:hover, .menu-2 .offcanvas-body .list-item-2 li a.active {
+        color: rgb(0, 119, 255);
+        font-weight: bolder;
+    }
+    .menu-2 .offcanvas-body .list-item-2 li a i {
+        font-size: 18px;
+        padding: 0px 5px 0px 5px;
+        font-weight: bolder;
+    }
+}
+</style>
+</head>
+<body>
+    <section id="header">
+        <div class="head-info">
+            <div class="address-info">
+                <ul>
+                    <li><i class="fa fa-map-marker"></i>234 Triumph,Los Angela, California</li>
+                    <li><i class="fas fa-stopwatch"></i>Mon-Sat 8:00-16:00 Sunday CLOSED</li>
+                </ul>
+            </div>
+            <div class="contact-info">
+            <div class="icon">
+                <ul>
+                    <li><i class="fa fa-facebook"></i></li>
+                    <li><i class="fa fa-twitter"></i></li>
+                    <li><i class="fa fa-pinterest"></i></li>
+                    <li><i class="fa fa-linkedin"></i></li>
+                </ul>
+            </div>
+            <div class="head-btn">
+                <a href="#" type="button" class="btn">Set An Appointment</a>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="menu">
+            <div class="logo">
+                <h2 class="text-warning">Code<span class="text-success">Light</span></h2>
+            </div>
+            <ul class="list-item-1">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                <li><a href="#"><i class="fa fa-opencart position-relative">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        4+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </i></a></li>
+            </ul>
+            <div class="menu-2">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                    <i class="fa fa-bars navbar-toggler-icon text-light"></i>
+                    <!--<span class="navbar-toggler-icon text-light"></span>-->
+                </button>
+
+                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title text-warning" id="offcanvasBottomLabel">Code<span class="text-light">Light</span></h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body small">
+                   <ul class="list-item-2">
+                    <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                <li><a href="#"><i class="fa fa-opencart position-relative">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        4+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </i></a></li>
+                   </ul>
+                </div>
+                </div>
+
+        </div>
+        </div>
+
+        </div>
+
+
+        <div class="head-hint">
+            <div class="head-hint-content">
+                <div class="head-hint-item">
+                    <li><i class="fas fa-calendar"></i></li>
+                    <li class="head-hint-info">
+                        <h6>Number 1 Hospital</h6>
+                        <p>Lorem ipsum dolor.</p>
+                    </li>
+                </div>
+                <div class="head-hint-item">
+                    <li><i class="fas fa-user-check"></i></li>
+                    <li class="head-hint-info">
+                        <h6>Personal Cabinet</h6>
+                        <p>Qualification</p>
+                    </li>
+                </div>
+                <div class="head-hint-item">
+                    <li><i class="fas fa-thumbs-up"></i></li>
+                    <li class="head-hint-info">
+                        <h6>Get Result Divine</h6>
+                        <p>Authencity</p>
+                    </li>
+                </div>
+            </div>
+
+            <div class="head-hint-contact">
+                <a href="#" class="btn"><i class="fa fa-phone"></i>Call Free: +2349044687582</a>
+                <a href="#" class="btn-2"><i class="fa fa-phone"></i></a>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <section id="home">
+        <div class="banner-text">
+            <i class="fas fa-heartbeat"></i><em>We Give You The Best</em>
+            <h3><span>Medical</span> Services<br>That You Can <span>Trust</span></h3>
+            <p>
+                Need professional help?Our staff will answer your questions.<br>
+                Visit us Now or Make An Appointment
+            </p>
+            <a href="#" type="button" class="btn">Make An Appointment</a>
+        </div>
+
+        <div class="under-info">
+            <li>
+                <h6>Dr Alex Mary</h6>
+                <p>Get An Appointment<a href="#">Learn More</a></p>
+            </li>
+            <li><i class="fa fa-user-md"></i></li>
+        </div>
+    </section>
+
+    <section id="extra-abt">
+        <div class="extra-abt-box">
+            <div class="extra-abt-content">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h6>Oral Care</h6>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+
+            <div class="extra-abt-content">
+                <i class="fas fa-head-side-cough"></i>
+                <h6>Heal Body</h6>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+
+            <div class="extra-abt-content">
+                <i class="fas fa-ambulance"></i>
+                <h6>Ambulance</h6>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+
+            <div class="extra-abt-content">
+                <i class="fas fa-store"></i>
+                <h6>Drug Store</h6>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+
+            <div class="extra-abt-content">
+                <i class="fas fa-eye"></i>
+                <h6>Eye Care</h6>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--<section id="extra-abt">
+        <div class="container text-center">
+            <div class="extra-abt-box text-center">
+                <div class="row text-center">
+                <div class="col-md-2 text-center">
+                <div class="extra-abt-content">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    <h6>Oral Care</h6>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+                </div>
+                <div class="col-md-2 text-center">
+                <div class="extra-abt-content">
+                    <i class="fas fa-head-side-cough"></i>
+                    <h6>Heal Body</h6>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+                </div>
+                <div class="col-md-2 text-center">
+                <div class="extra-abt-content">
+                    <i class="fas fa-ambulance"></i>
+                    <h6>Ambulance</h6>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+                </div>
+                <div class="col-md-2 text-center">
+                <div class="extra-abt-content">
+                    <i class="fas fa-store"></i>
+                    <h6>Drug Store</h6>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+                </div>
+                <div class="col-md-2 text-center">
+                <div class="extra-abt-content">
+                    <i class="fas fa-eye"></i>
+                    <h6>Eye Care</h6>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+                </div>
+               
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+
+    <section id="standard">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="standard-content">
+                        <h4>We're Setting the Standards in<br>Research & Clinical Care</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Iusto perferendis,
+                            eveniet quae corporis ad vitae omnis
+                            explicabo modi illum ex praesentium
+                            dicta ipsa saepe architecto quisquam 
+                            neque, totam iure! Magnam!
+                        </p>
+                        <div class="stand-features">
+                            <h5>Delmant Special Features</h5>
+                            <div class="stand-features-content">
+                            <div class="features">
+                                <li><i class="fa fa-check-circle"></i>Lorem ipsum dolor sit.</li>
+                                <li><i class="fa fa-check-circle"></i>Lorem ipsum dolor sit.</li>
+                                <li><i class="fa fa-check-circle"></i>Lorem ipsum dolor sit.</li>
+                            </div>
+                            <div class="features">
+                                <li><i class="fa fa-check-circle"></i>Lorem ipsum dolor sit.</li>
+                                <li><i class="fa fa-check-circle"></i>Lorem ipsum dolor sit.</li>
+                                <li><i class="fa fa-check-circle"></i>Lorem ipsum dolor sit.</li>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="standard-btn">
+                            <a href="#" class="btn-view" type="button">View More</a>
+                            <a href="#" class="btn-contact" type="button">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="standard-image">
+                        <img src="Bg/pic 9.jpeg" alt="" class="img-responsive d-block img-fluid text-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>About Us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. 
+                        Laborum recusandae quis, magni 
+                        pariatur.
+                        </p>
+                </div>
+                <div class="col-md-3">
+                    <h2>Useful Links</h2>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#services">How its Works</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </div>
+                <div class="col-md-3">
+                    <h2>More</h2>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#services">How its Works</a></li>
+                </div>
+                <div class="col-md-3">
+                    <h2>Newsletter</h2>
+                    <li>iwejuoebuka@gmail.com</li>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </section>
+
+    
+
+</body>
+</html>
